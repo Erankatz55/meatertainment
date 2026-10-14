@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#141210">
+<link rel="canonical" href="https://meatertainment.co.il/">
+<link rel="icon" type="image/png" href="images/icon.png">
+<link rel="apple-touch-icon" href="images/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:url" content="https://meatertainment.co.il/">
+<meta property="og:title" content="Meatertainment — מופע בשרים אינטראקטיבי">
+<meta property="og:description" content="מופע בשרים אינטראקטיבי שמגיע עד אליכם — ניסויים, משחקים, טיפים ונתחים מיוחדים.">
+<meta property="og:image" content="https://meatertainment.co.il/images/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Meatertainment</title>
+<meta name="description" content="Meatertainment — מופע בשרים אינטראקטיבי שמגיע עד אליכם: ניסויים, משחקים, טיפים מקצועיים ונתחים מיוחדים.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Secular+One&family=Assistant:wght@400;600;700&family=Oswald:wght@500;700&display=swap">
+<style>
+/* Layout: dark "after-dark grill" — full-bleed hero photo, then alternating text/photo bands, a strip of real moments, WhatsApp always one tap away */
+:root{
+  --char:#141210;       /* charcoal background */
+  --ember:#1e1a17;      /* raised surface */
+  --line:#3a322c;       /* hairlines */
+  --bone:#f3ede6;       /* main text */
+  --ash:#b9ada2;        /* secondary text */
+  --red:#c8361d;        /* logo red */
+  --copper:#d18a4a;     /* logo copper */
+  --wa:#25d366;         /* WhatsApp */
+  --f-display:"Secular One","Assistant",system-ui,sans-serif;
+  --f-body:"Assistant",system-ui,sans-serif;
+  --f-tag:"Oswald","Assistant",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--char);color:var(--bone);font-family:var(--f-body);font-size:18px;line-height:1.65;direction:rtl}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,5vw,42px)}
+h3{font-size:22px}
+p{margin:0}
+.tag{font-family:var(--f-tag);text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:var(--copper)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.35) 0%,rgba(20,18,16,.75) 60%,var(--char) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-block:48px 56px;display:grid;gap:22px}
+.logo{width:min(460px,92%);filter:drop-shadow(0 2px 10px rgba(0,0,0,.6))}
+.hero h1{font-size:clamp(34px,7vw,60px);max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--copper)}
+.lead{font-size:clamp(18px,2.4vw,21px);color:var(--bone);max-width:42ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-body);font-weight:700;font-size:18px;text-decoration:none;padding:14px 22px;border-radius:999px;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.btn-wa{background:var(--wa);color:#0b2414}
+.btn-ghost{border:1px solid var(--line);color:var(--bone)}
+.btn svg{width:22px;height:22px;flex:none}
+.phone{font-family:var(--f-tag);letter-spacing:.06em;color:var(--ash);direction:ltr;unicode-bidi:isolate;user-select:all}
+
+/* sections */
+section{padding-block:64px}
+section + section{border-top:1px solid var(--line)}
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.intro .text{display:grid;gap:16px;min-width:0}
+.intro img{border-radius:8px;aspect-ratio:3/4;object-fit:cover;width:100%;max-width:100%}
+
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:28px}
+.pillar{background:var(--ember);padding:26px;display:grid;gap:8px;align-content:start;min-width:0}
+.pillar .tag{color:var(--red)}
+.pillar p{color:var(--ash)}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:28px;counter-reset:s}
+.step{display:grid;gap:8px;align-content:start;min-width:0}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--f-tag);font-weight:700;font-size:34px;color:var(--copper);line-height:1}
+.step p{color:var(--ash)}
+
+.cuts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.cut{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600;color:var(--bone);background:var(--ember)}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px;margin-top:28px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.gallery .tall{grid-row:span 2}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.box{border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
+.box ul{margin:0;padding-inline-start:20px;display:grid;gap:6px;color:var(--ash)}
+.box li strong{color:var(--bone);font-weight:600}
+
+.for{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.for span{font-family:var(--f-display);font-size:20px;padding:10px 18px;border-radius:8px;background:var(--ember);border:1px solid var(--line)}
+
+details{border-bottom:1px solid var(--line);padding-block:16px}
+details:first-of-type{border-top:1px solid var(--line);margin-top:24px}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--copper);font-family:var(--f-tag);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--ash);margin-top:10px;max-width:65ch}
+summary:focus-visible{outline:2px solid var(--copper);outline-offset:4px}
+
+.final{text-align:center;display:grid;gap:18px;justify-items:center}
+.final p{color:var(--ash);max-width:46ch}
+footer{border-top:1px solid var(--line);padding-block:28px 96px;color:var(--ash);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+.float-wa{position:fixed;left:calc(16px + env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+
+@media (max-width:820px){
+  .intro,.two{grid-template-columns:1fr}
+  .intro img{aspect-ratio:4/3}
+  .steps{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+}
+@media (max-width:520px){
+  body{font-size:17px}
+  section{padding-block:48px}
+  .pillars,.steps{grid-template-columns:1fr}
+  .float-wa .label{display:none}
+  .float-wa{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="hero-img" src="images/hero-brisket.jpg" alt="">
+  <div class="wrap">
+    <img class="logo" src="images/logo.png" alt="Meatertainment — השעשועון הכי טעים בעיר">
+    <h1>מופע בשרים אינטראקטיבי <em>שמגיע עד אליכם</em></h1>
+    <p class="lead">ניסויים, משחקים, טיפים מקצועיים ונתחים מיוחדים. האורחים טועמים, מנחשים ומצביעים מהטלפון, ובסוף הערב כולם שבעים ויודעים על בשר דברים שלא ידעו קודם.</p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/972552426612?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%A8%D7%9F%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20Meatertainment%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+        דברו איתי בוואטסאפ
+      </a>
+      <a class="btn btn-ghost" href="#how">איך זה עובד</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap intro">
+      <div class="text">
+        <span class="tag">Meatertainment</span>
+        <h2>ערב שהוא גם ארוחת בשרים וגם שעשועון</h2>
+        <p>אני מגיע אליכם עם הגריל, צולה מול האורחים נתחים שלא רואים בכל מנגל, וכל מנה הופכת לפינה בשעשועון. שיטות צלייה מתחרות זו בזו, טעימות עיוורות, הצבעות חיות מהטלפון ובסוף קרב כנפיים חריפות שבו מי שטועה בטריוויה, אוכל.</p>
+        <p>אתם מארחים ונהנים. את הבשר, התוספות, הגריל וכלי ההגשה אני מביא.</p>
+      </div>
+      <img src="images/picanha-skewer.jpg" alt="פיקניה על שיפוד מעל השולחן, בשקיעה">
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">מה יש בערב</span>
+      <h2>ארבעה דברים שקורים כל הערב</h2>
+      <div class="pillars">
+        <div class="pillar"><span class="tag">Experiments</span><h3>ניסויים</h3><p>אותו נתח, כמה שיטות צלייה, המלחה או צריבה. האורחים טועמים בלי לדעת מה זה מה, ומצביעים מי מנצח.</p></div>
+        <div class="pillar"><span class="tag">Games</span><h3>משחקים</h3><p>טעימה עיוורת עם מתמודדים מהקהל, בינגו שרץ לאורך הערב וקרב טריוויה עם כנפיים חריפות בסוף.</p></div>
+        <div class="pillar"><span class="tag">Pro tips</span><h3>טיפים מקצועיים</h3><p>איך פורסים נכון, איך עובדים עם מדחום, ומתי להמליח. דברים שתיקחו איתכם לגריל הבא.</p></div>
+        <div class="pillar"><span class="tag">Special cuts</span><h3>נתחים מיוחדים</h3><p>נתחי בקר משובחים במידת העשייה המדויקת, עם מדחום בכל נתח.</p></div>
+      </div>
+      <div class="cuts" aria-label="הנתחים של הערב">
+        <span class="cut">בריסקט מעושן</span><span class="cut">פיקניה ברודיזיו</span><span class="cut">דנוור</span><span class="cut">פלאנק</span><span class="cut">שפיץ שייטל</span><span class="cut">אנטריקוט</span><span class="cut">נתח קצבים</span><span class="cut">איירון פלאט</span><span class="cut">כנפיים חריפות</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <span class="tag">איך זה עובד</span>
+      <h2>מההודעה הראשונה ועד הביס האחרון</h2>
+      <div class="steps">
+        <div class="step"><h3>מדברים</h3><p>שולחים הודעה בוואטסאפ, מספרים מה חוגגים, כמה אורחים ואיפה, וסוגרים תאריך.</p></div>
+        <div class="step"><h3>אני מגיע</h3><p>עם הגריל, הבשר, התוספות וכל ציוד ההגשה. אתם רק עורכים שולחן.</p></div>
+        <div class="step"><h3>המופע מתחיל</h3><p>שבע פינות בהשראת תוכניות טלוויזיה, 3–3.5 שעות של ניסויים, טעימות ומשחקים.</p></div>
+        <div class="step"><h3>כולם שבעים</h3><p>מכריזים על המנצחים, מסכמים מה למדנו, ואתם נשארים עם ערב שמדברים עליו.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">מהערבים שלנו</span>
+      <h2>ככה זה נראה</h2>
+      <div class="gallery">
+        <img class="tall" src="images/brisket-board.jpg" alt="בריסקט פרוס על קרש בוצ'ר">
+        <img src="images/grill-skewers.jpg" alt="שיפודים על הגריל">
+        <img src="images/sliced-steak.jpg" alt="סטייק פרוס במידת עשייה ורודה">
+        <img class="tall" src="images/pan-sear.jpg" alt="סטייק נצרב במחבת ברזל">
+        <img src="images/grill-pan.jpg" alt="סטייקים ומחבת על הגריל">
+        <img src="images/sides.jpg" alt="ממרחים, סלטים וחמוצים על השולחן">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">פרטים</span>
+      <h2>מה כלול, ומה צריך מכם</h2>
+      <div class="two">
+        <div class="box">
+          <h3>אני מביא</h3>
+          <ul>
+            <li><strong>שפע של בשר</strong> בשבע פינות, כולל כנפיים לקרב החריף</li>
+            <li><strong>תוספות:</strong> פוקאצ'ה, צ'ימיצ'ורי, טחינה יפנית, סלט ויניגרט, חציל בטחינה וחמוצים</li>
+            <li><strong>גריל וציוד:</strong> מדחומים, להביור, מחבת ברזל וכל כלי ההגשה</li>
+            <li><strong>הנחיה, משחקים ומוזיקה</strong> לאורך כל הערב</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>אתם דואגים ל</h3>
+          <ul>
+            <li>שולחן וכיסאות לכל האורחים</li>
+            <li>צלחות וסכו"ם</li>
+            <li>מקום פתוח ומאוורר לגריל, כמו חצר או מרפסת</li>
+            <li>טלפון לכל אורח (להצבעות) וקליטה או Wi-Fi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="for" aria-label="למי זה מתאים">
+        <span>ימי הולדת</span><span>ערבי חברים</span><span>גיבושי צוות</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="tag">שאלות נפוצות</span>
+      <h2>מה שכולם שואלים</h2>
+      <details><summary>לכמה אנשים זה מתאים?</summary><p>מומלץ ל-8 עד 12 אורחים. מתאים גם לקבוצות גדולות יותר, ואפשר להוסיף בריסקט כשיש הרבה אורחים רעבים.</p></details>
+      <details><summary>כמה זמן זה לוקח?</summary><p>המופע עצמו כ-3 עד 3.5 שעות. אני מגיע מוקדם יותר כדי להקים ולהדליק את הגריל.</p></details>
+      <details><summary>איפה אתם עובדים?</summary><p>מחיפה ועד תל אביב והסביבה, כולל השרון וואדי ערה. לאזורים רחוקים יותר יש תוספת נסיעה, ומעבר לכך בתיאום מיוחד.</p></details>
+      <details><summary>הבשר כשר?</summary><p>לא, הבשר לא כשר.</p></details>
+      <details><summary>יש משהו לצמחונים?</summary><p>הערב בנוי סביב בשר ואין בו מנה צמחונית. אתם מוזמנים להוסיף לשולחן סלטים או תוספות משלכם.</p></details>
+      <details><summary>אפשר להביא שתייה וקינוח?</summary><p>בהחלט. שתייה, כולל אלכוהול, וקינוח או עוגה ליום הולדת מתקבלים בברכה.</p></details>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap final">
+      <img class="logo" src="images/logo.png" alt="" style="width:min(300px,70%)">
+      <h2>רוצים ערב כזה?</h2>
+      <p>שלחו הודעה, ספרו מה אתם חוגגים, ונבנה יחד את הערב.</p>
+      <a class="btn btn-wa" href="https://wa.me/972552426612?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%A8%D7%9F%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20Meatertainment%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+        דברו איתי בוואטסאפ
+      </a>
+      <span class="phone">055-242-6612</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Meatertainment · ערן</span><span class="phone">055-242-6612</span></div>
+</footer>
+
+<a class="btn btn-wa float-wa" href="https://wa.me/972552426612?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%A8%D7%9F%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20Meatertainment%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener" aria-label="וואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+  <span class="label">וואטסאפ</span>
+</a>
+
+</body>
+</html>
